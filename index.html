@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirror-Image Anatomy</title>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<style>
+  :root { --navy:#175064; --bg:#f4f6f3; --ink:#1d2a33; --muted:#56656d; }
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: "Times New Roman", Times, serif; background: var(--bg); color: var(--ink); min-height: 100vh; display: flex; flex-direction: column; }
+  header { background: var(--navy); color: #fff; padding: 18px 16px 14px; text-align: center; }
+  h1 { font-size: 1.45rem; } header p { font-size: .95rem; opacity: .9; margin-top: 4px; }
+  model-viewer { flex: 1; width: 100%; min-height: 62vh; background: var(--bg); }
+  .ar { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); background: var(--navy); color: #fff; border: 0; border-radius: 10px; padding: 12px 22px; font: 600 1.05rem "Times New Roman", serif; }
+  footer { padding: 12px 16px 18px; font-size: .85rem; color: var(--muted); text-align: center; line-height: 1.4; }
+</style></head>
+<body>
+<header><h1>Mirror-Image Anatomy</h1><p>Rotate the model, then tap the button to place it in your room</p></header>
+<model-viewer src="model.glb" ios-src="model.usdz" alt="3D model of the chest bones and organs from a public CT" ar ar-modes="quick-look scene-viewer webxr" ar-scale="fixed" camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1">
+  <button slot="ar-button" class="ar">View in your space</button>
+</model-viewer>
+<footer>Hafsa Khalil, Syed Khalil · UT Southwestern Medical School · AMMSA National Conference 2026<br>
+Model from a public, de-identified CT (CMB-LCA, The Cancer Imaging Archive, CC BY 4.0) with embedded R and L markers. For research and education only; not for clinical use.</footer>
+</body></html>
