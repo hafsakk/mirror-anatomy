@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirror-Image Anatomy: Face</title>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<style>
+  :root { --navy:#175064; --bg:#f4f6f3; --ink:#1d2a33; --muted:#56656d; --red:#c0392b; }
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: "Times New Roman", Times, serif; background: var(--bg); color: var(--ink); min-height: 100vh; display: flex; flex-direction: column; }
+  header { background: var(--navy); color: #fff; padding: 18px 16px 14px; text-align: center; }
+  h1 { font-size: 1.45rem; } header p { font-size: .95rem; opacity: .9; margin-top: 4px; }
+  .toggle { display: flex; justify-content: center; gap: 8px; padding: 12px 16px 0; }
+  .toggle button { font: 600 1rem "Times New Roman", serif; padding: 9px 18px; border-radius: 10px; border: 2px solid var(--navy); background: #fff; color: var(--navy); }
+  .toggle button.on { background: var(--navy); color: #fff; }
+  .toggle button.on.mir { background: var(--red); border-color: var(--red); }
+  model-viewer { flex: 1; width: 100%; min-height: 60vh; background: var(--bg); }
+  .ar { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); background: var(--navy); color: #fff; border: 0; border-radius: 10px; padding: 12px 22px; font: 600 1.05rem "Times New Roman", serif; }
+  footer { padding: 12px 16px 18px; font-size: .85rem; color: var(--muted); text-align: center; line-height: 1.4; }
+  footer a { color: var(--navy); }
+</style></head><body>
+<header><h1>Face and jaw model</h1><p>Rotate the model, then tap the button to place it in your room</p></header>
+<model-viewer src="face.glb" ios-src="face.usdz" alt="3D model of the facial bones and jaw from a public CT" ar ar-modes="quick-look scene-viewer webxr" ar-scale="fixed" camera-controls touch-action="pan-y" shadow-intensity="0.6">
+  <button slot="ar-button" class="ar">View in your space</button>
+</model-viewer>
+<footer>Facial skeleton and mandible with embedded R and L markers, from a public, de-identified CT (TCGA-THCA, The Cancer Imaging Archive).<br>Hafsa Khalil, Syed Khalil · UT Southwestern Medical School · AMMSA National Conference 2026<br>
+For research and education only; not for clinical use. <a href="chest.html">View the chest model</a></footer>
+</body></html>
